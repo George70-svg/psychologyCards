@@ -1,5 +1,5 @@
 import { createGlobalStyle } from 'styled-components'
-//@ts-ignore
+// @ts-ignore
 import { ColorThemeProps, CommonStyle } from '@types/stylesType'
 
 export const Styles = createGlobalStyle<ColorThemeProps>`

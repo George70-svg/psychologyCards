@@ -77,7 +77,6 @@ type Theme = {
   widgetBackgroundHover: Color
 }
 
-
 export type CommonStyle = {
   colors: Colors
   fonts: Fonts
