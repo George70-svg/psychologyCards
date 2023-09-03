@@ -10,6 +10,7 @@ function App() {
   return (
     <>
       <Styles colorTheme={colorTheme}/>
+      <Styles colorTheme={colorTheme}/>
     </>
   )
 }
