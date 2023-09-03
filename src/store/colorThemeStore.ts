@@ -7,7 +7,7 @@ export interface IColorThemeState {
 }
 
 const initialState: IColorThemeState = {
-  colorTheme: localStorage.getItem('theme_color') as ColorTheme || 'darkTheme',
+  colorTheme: (localStorage.getItem('theme_color') as ColorTheme) || 'darkTheme',
 }
 
 export const colorThemeSlice = createSlice({
