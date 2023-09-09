@@ -13,7 +13,7 @@ export const Styles = createGlobalStyle<ColorThemeProps>`
     height: 100vh;
     width: 100vw;
     margin: 0;
-    background: ${(props) => commonStyle[props.colorTheme].backgroundGradient};
+    background: ${(props) => commonStyle[props.colorTheme].backgroundColor};
     color: white;
     font-family: 'Roboto', sans-serif;
     font-size: ${() => commonStyle.fonts.fs2};
