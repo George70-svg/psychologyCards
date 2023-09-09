@@ -5,7 +5,7 @@ export const StyledCardModes = styled.div.attrs(() => ({
 }))`
   height: 100%;
   width: 100%;
-
+  
   --header-height: 3rem;
   --main-height: calc(100vh - var(--header-height));
   --modes-header-height: 5rem;
