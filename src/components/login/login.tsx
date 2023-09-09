@@ -1,5 +1,5 @@
 import React from 'react'
-import { StyledLogin } from '@components/components/login/styles/login.styled'
+import { StyledLogin } from '@components/login/styles/login.styled'
 
 export function Login() {
   return (
