@@ -1,10 +1,22 @@
 import React from 'react'
 import { StyledCard } from '@components/card/styles/card.styled'
 
-export function Card() {
+interface CardProps {
+  img: string
+  onClick?: (event: React.MouseEvent<HTMLElement>) => void | undefined
+}
+
+export function Card(props: CardProps) {
   return (
     <StyledCard>
-      <h1>Card1</h1>
+      <div className='b-card card-wrapper'>
+        <div
+          className='b-card__cover'
+          style={{ backgroundImage: `url(${props.img})` }}
+        >
+
+        </div>
+      </div>
     </StyledCard>
   )
 }
