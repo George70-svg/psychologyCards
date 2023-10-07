@@ -9,7 +9,7 @@ interface ModesProps {
 export function Modes(props: ModesProps) {
   const location = useLocation()
 
-  //FIXME [@asiuraev 19.09.2023]: Возможно, стоит подумать над другой проверкой пути
+  //FIXME [asiuraev 19.09.2023]: Возможно, стоит подумать над другой проверкой пути
   return (
     <StyledModes>
       {(location.pathname === `/decks/${props.deckName}/visible_mode` ||

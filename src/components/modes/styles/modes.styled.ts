@@ -7,9 +7,9 @@ export const StyledModes = styled.div.attrs(() => ({
 }))`
   --header-height: 3rem;
   --modes-header-height: 5rem;
-  
-  height: calc(100% - var(--header-height));
+
   width: 100%;
+  height: calc(100% - var(--header-height));
   
   .modes-wrapper {
     width: 100%;
