@@ -5,8 +5,9 @@ import { CircularProgress } from '@mui/material'
 import { IStore } from '@store/store'
 import { withDelay } from '@utils/common'
 import { Login } from '@components/login/login'
-import { CardModes } from '@components/card-modes/card-modes'
-import { Mode } from '@components/card-modes/components/mode'
+import { Decks } from '@components/decks/decks'
+import { Modes } from '@components/modes/modes'
+import { Cards } from '@components/cards/cards'
 
 import { router } from './router/router'
 import { Styles } from './styles'
@@ -24,11 +25,11 @@ export function Root() {
     withDelay(() => {
       setLoading(false)
       console.log('redirect')
-      navigate('/modes')
+      navigate('/decks')
     }, 1500)
   }, [ navigate ])
 
-  const modes = [ 'first_mode', 'second_mode', 'third_mode', 'fourth_mode', 'fifth_mode', 'sixth_mode' ]
+  const decks = [ 'first_deck', 'second_deck', 'third_deck', 'fourth_deck', 'fifth_deck', 'sixth_deck' ]
 
   return (
     <>
@@ -43,9 +44,12 @@ export function Root() {
       {!isLoading &&
         <Routes>
           <Route path="login" element={ <Login /> } />
-          <Route path="modes" element={ <CardModes /> } >
-            {modes.map((mode, index) => (
-              <Route key={ index } path={ `${mode}` } element={<Mode modeName={ mode } />} />
+          <Route path="decks" element={ <Decks /> } >
+            {decks.map((deckName, index) => (
+              <Route key={ index } path={ `${deckName}` } element={<Modes deckName={deckName} />} >
+                <Route path="visible_mode" element={<Cards deckName={deckName} />} />
+                <Route path="hidden_mode" element={<Cards deckName={deckName} />} />
+              </Route>
             ))}
           </Route>
         </Routes>

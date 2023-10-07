@@ -2,8 +2,8 @@ import styled from 'styled-components'
 
 import { commonStyle } from '../../../styles'
 
-export const StyledModeSlider = styled.div.attrs(() => ({
-  className: 'mode-slider',
+export const StyledDecksSlider = styled.div.attrs(() => ({
+  className: 'deck-slider',
 }))`
   display: flex;
   gap: 2rem;

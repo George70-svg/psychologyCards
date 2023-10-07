@@ -1,21 +1,21 @@
 import styled from 'styled-components'
 
-export const StyledCardModes = styled.div.attrs(() => ({
-  className: 'card-modes',
+export const StyledDeckModes = styled.div.attrs(() => ({
+  className: 'deck-modes',
 }))`
   height: 100%;
   width: 100%;
   
   --header-height: 3rem;
   --main-height: calc(100vh - var(--header-height));
-  --modes-header-height: 5rem;
-  --modes-container-height: calc(var(--main-height) - var(--modes-header-height));
+  --decks-header-height: 5rem;
+  --decks-container-height: calc(var(--main-height) - var(--decks-header-height));
   
   .app-header {
     height: var(--header-height);
   }
   
-  .modes-wrapper {
+  .decks-wrapper {
     width: 100%;
     height: var(--main-height);
     
@@ -23,12 +23,12 @@ export const StyledCardModes = styled.div.attrs(() => ({
       display: flex;
       justify-content: center;
       align-items: center;
-      height: var(--modes-header-height);
+      height: var(--decks-header-height);
     }
     
-    .mode-slider {
+    .deck-slider {
       width: 100%;
-      height: var(--modes-container-height);
+      height: var(--decks-container-height);
     }
   }
 `

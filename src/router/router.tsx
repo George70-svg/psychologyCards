@@ -1,6 +1,6 @@
 import React from 'react'
 import { createBrowserRouter } from 'react-router-dom'
-import { CardModes } from '@components/card-modes/card-modes'
+import { Decks } from '@components/decks/decks'
 import { Login } from '@components/login/login'
 
 import { Root } from '../App'
@@ -15,8 +15,8 @@ export const router = createBrowserRouter([
         element: <Login />,
       },
       {
-        path: 'modes',
-        element: <CardModes />,
+        path: 'decks',
+        element: <Decks />,
         children: []
       },
     ]
