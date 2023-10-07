@@ -8,6 +8,7 @@ import { Login } from '@components/login/login'
 import { Decks } from '@components/decks/decks'
 import { Modes } from '@components/modes/modes'
 import { Cards } from '@components/cards/cards'
+import { Layout } from '@components/layout/layout'
 
 import { router } from './router/router'
 import { Styles } from './styles'
@@ -52,6 +53,7 @@ export function Root() {
               </Route>
             ))}
           </Route>
+          <Route path="layout" element={ <Layout /> } />
         </Routes>
       }
     </>
